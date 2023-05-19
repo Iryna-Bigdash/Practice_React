@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 
 export const PublicationContainer = styled.div`
-    background-color:  #dff6b1;
     padding: 30px;
     font-size: 30px;
     margin-top: 50px;
