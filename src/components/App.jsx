@@ -2,9 +2,9 @@ import { React, Component } from "react";
 import VideoList  from "components/VideoList/VideoList" ;
 import Player  from "components/Player/Player";
 import videos from "../servises/videos.json";
-// import { ThemeProvider } from "styled-components";
 import Reader from 'components/Reader/Reader';
 import publication from '../servises/publication';
+import GallerySection from "./GalleryAPI/GalleryAPI";
 
 export default class App extends Component {
   state = {
@@ -14,7 +14,7 @@ export default class App extends Component {
   selectVideo = link => {
     this.setState({ selectedVideo: link});
   };
-  // const theme = {};
+
 
   render() {
     return (
@@ -22,10 +22,8 @@ export default class App extends Component {
         <h1>Selected video: {this.state.selectedVideo}</h1>
         <VideoList videos={videos} onSelect={this.selectVideo}/>
         <Player url={this.state.selectedVideo}/>
-
-         {/* <ThemeProvider theme={theme}> */}
          <Reader items={publication}/>
-         {/* </ThemeProvider> */}
+         <GallerySection />
       
       </div>
     )

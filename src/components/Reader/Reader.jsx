@@ -33,7 +33,7 @@ changeIndex = (value) => {
     const {index} = this.state;
     const {items} = this.props;
     const totalItems = items.length;
-    console.log(items[index]);
+    // console.log(items[index]);
     const currentItem = items[index];
 
     return (
